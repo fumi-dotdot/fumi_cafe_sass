@@ -1,0 +1,47 @@
+@use "../util/" as u;
+@use "menu";
+@use "about";
+@use "../global/boilerplate";
+
+/* FOOTER*/
+.footer {
+  background-color: var(--color-body-variant);
+  text-align: center;
+  color: var(--color-alternative);
+
+  &__text {
+    @extend .menu__content;
+    @extend .about__content-text;
+    @include u.breakpoint(medium) {
+    }
+  }
+  &__items {
+    margin-top: var(--space-l);
+    display: flex;
+    justify-content: center;
+    gap: u.rem(20);
+    @include u.breakpoint(medium) {
+      gap: u.rem(40);
+    }
+  }
+  &__item p {
+    @extend .about__content-text;
+    @extend .mbl-space-s;
+  }
+  &__link {
+    transition: opacity 0.3s;
+  }
+  &__link:hover {
+    opacity: 0.7;
+  }
+  &__copyright {
+    border-top: 1px solid var(--color-border);
+    padding: u.rem(40) 0 u.rem(20);
+  }
+  &__copyright small {
+    font-size: var(--step--1);
+  }
+}
+.sns__img {
+  width: u.rem(60);
+}

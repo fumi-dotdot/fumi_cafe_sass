@@ -1,0 +1,61 @@
+@use "../util/" as u;
+
+/* BOILERPLATE*/
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: u.$font;
+  background: var(--color-body);
+  color: var(--color-text);
+  // letter-spacing: 0.05em;
+}
+img {
+  width: 100%;
+}
+img.logo {
+  max-width: u.rem(200);
+  margin-inline: auto;
+}
+// for Sweet Delight project
+
+// NOTE: VERTICAL SPACING: to add vertical (in the block dimension) breathing room between sections
+.pt-space-xl-2xl {
+  padding-top: var(--space-xl-2xl);
+}
+.pb-space-xl-2xl {
+  padding-block: var(--space-xl-2xl);
+}
+.mbl-space-l-xl {
+  margin-block: (--space-l-xl);
+}
+.mbl-space-s {
+  margin-block: var(--space-s);
+}
+// NOTE: HORIZONTAL SPACING: to add horizontal (the direction of text flow within a line) breathing room for left and right
+.wrapper {
+  padding-inline: u.rem(40);
+  @include u.breakpoint(medium) {
+    max-width: u.rem(1000 + 20 * 2);
+    padding-inline: auto;
+  }
+  &--light {
+    color: var(--color-alternative);
+  }
+  .pi-space-l-xl {
+    padding-inline: var(--space-l-xl);
+  }
+}
+// NOTE: BOX STYLING
+.box {
+  text-align: center;
+  &__title {
+    font-size: var(--step-4);
+    display: block;
+  }
+  &__sub {
+    font-size: var(--step-0);
+    display: block;
+  }
+}

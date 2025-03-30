@@ -1,0 +1,17 @@
+@use "../util/" as u;
+
+/* ABOUT*/
+.about {
+  &__content {
+    @include u.breakpoint(medium) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: u.rem(40);
+    }
+  }
+  &__content-text {
+    font-size: var(--step-0);
+    line-height: 2;
+  }
+}

@@ -1,0 +1,21 @@
+@use "../util/" as u;
+
+/* PAGE TOP*/
+$size: u.rem(60);
+
+.pagetop {
+  height: $size;
+  width: $size;
+  position: fixed;
+  right: u.rem(10);
+  bottom: u.rem(10);
+  background: var(--color-alternative);
+  opacity: 0.7;
+  border: none;
+  border-radius: 50%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  cursor: pointer;
+}

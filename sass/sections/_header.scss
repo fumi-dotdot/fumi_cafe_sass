@@ -1,0 +1,43 @@
+@use "../util/" as u;
+
+/* HEADER*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid var(--color-border);
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  text-align: center;
+  padding: var(--space-2xs-xs);
+  &__items {
+    display: flex;
+    justify-content: center;
+    gap: u.rem(60);
+    margin-top: var(--space-xs);
+  }
+  &__link {
+    color: var(--color-alternative);
+    font-size: var(--step-0);
+    transition: opacity 0.3s;
+  }
+  &__link:hover {
+    opacity: 0.7;
+  }
+  & .wrapper {
+    @include u.breakpoint(medium) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+.submenu {
+  position: absolute;
+  top: 100%;
+  color: var(--color-alternative);
+  text-align: left;
+  background: rgba(0, 0, 0, 0.3);
+  padding: u.rem(20) u.rem(10);
+  font-size: var(--step-0);
+  display: none;
+}

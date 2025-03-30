@@ -1,0 +1,21 @@
+/* @link https://utopia.fyi/type/calculator?c=320,16,1.333,1240,20,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+  --step--2: clamp(0.5628rem, 0.5138rem + 0.2447vw, 0.7035rem);
+  --step--1: clamp(0.7502rem, 0.685rem + 0.3262vw, 0.9377rem);
+  --step-0: clamp(1rem, 0.913rem + 0.4348vw, 1.25rem);
+  --step-1: clamp(1.333rem, 1.2171rem + 0.5796vw, 1.6663rem);
+  --step-2: clamp(1.7769rem, 1.6224rem + 0.7726vw, 2.2211rem);
+  --step-3: clamp(2.3686rem, 2.1626rem + 1.0298vw, 2.9607rem);
+  --step-4: clamp(3.1573rem, 2.8828rem + 1.3728vw, 3.9467rem);
+  --step-5: clamp(4.2087rem, 3.8428rem + 1.8299vw, 5.2609rem);
+}
+
+// HACK: Common Type Scale Ratios
+// Several ratios are commonly used in type scales, each offering a different level of contrast between sizes:
+
+// Major Second (1.125): Subtle, minimal contrast
+// Minor Third (1.2): Slightly more noticeable contrast
+// Major Third (1.25): Balanced, moderate contrast
+// Perfect Fourth (1.333): Classical typographic scale
+// Golden Ratio (1.618): Dramatic, high contrast

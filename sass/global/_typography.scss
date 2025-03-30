@@ -1,0 +1,24 @@
+@use "../util/" as u;
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  line-height: 1.1;
+}
+h1 {
+  font-size: clamp(u.rem(28), u.rem(16) + 2vw, u.rem(40));
+}
+h2 {
+  font-size: clamp(u.rem(22), u.rem(14) + 1.5vw, u.rem(36));
+}
+p {
+  // font-size: u.rem(16);
+  font-size: clamp(u.rem(14), u.rem(11.4) + 0.3704vw, u.rem(16));
+}
+
+//NOTE: rem: This unit is relative to the font size of the root element (<html>). It remains consistent across the document, providing a reliable baseline for sizing.=>stick to rem for font-size
+//NOTE: em: This unit is relative to the font size of its parent element. Its value can vary depending on the inheritance chain, making it more flexible but sometimes less predictable. ※for padding/margin, it is referencing the font size of that element, not of the parent.
+// NOTE: px for sizing is not recommended as it does not respond to change of browser base font size.
+// use of vw alone to define font size: it looks at only viewport width, so you cannot zoom in or out - accessibility issue
+// combination of rem + vw makes the transition less dramatic
